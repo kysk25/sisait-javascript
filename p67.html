@@ -2,9 +2,17 @@
     <body>
         <img id="image" src="pudding.jpg" width="120" height="100">
         <script>
+            var imgsrc = 1;
             function changeImage() {
-                document.getElementById("image").src = "strawberry.jpg";
-            }
+                if(imgsrc == 2) {
+                    document.getElementById("image").src = "pudding.jpg"
+                    imgsrc=1;
+                }else{
+                    document.getElementById("image").src = "strawberry.jpg";
+                    imgsrc=2;
+                }
+                
+                }
         </script>
         <input type="button" onclick="changeImage()" value="click!"/>
     </body>
